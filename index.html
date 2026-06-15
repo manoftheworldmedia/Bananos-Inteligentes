@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Bananos Inteligentes — AI Orchestration for the Banana Industry</title>
+<meta name="description" content="Bananos Inteligentes is the AI orchestration platform built for the banana industry. Unify yield, weather, rot, spray and soil into one intelligence layer — and ask Banana Chat anything. Live with Corbana, San Pablo, CR." />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Bananos Inteligentes — Hear everything the banana is telling us." />
+<meta property="og:description" content="The AI orchestration platform for the banana industry. Built by Man of the World." />
+<meta property="og:image" content="assets/sticker.png" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500;1,9..144,600&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/site.css" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Does Bananos Inteligentes replace our existing systems?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Bananos Inteligentes sits over the data you already collect — yield, weather, rot, spray and soil — and unifies it into a single intelligence layer. No migration is required; it adds intelligence on top of what is already there."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does it take to set up on a farm or network?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Pilot setup runs in weeks, not months. We start in the field with the questions your team is already asking, then connect the data sources behind them — so value arrives early."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does the platform handle disease pressure like Black Sigatoka?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It correlates weather patterns with historical rot and spray efficacy to get ahead of disease pressure — telling teams not just when to spray, but what. Black Sigatoka moves from constant emergency to manageable variable."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Who owns the data?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You do. Operators own their operational data. The intelligence layer runs over the data you already collect — it does not extract or resell it."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What languages does Banana Chat support?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Spanish and English. Any team member — agronomy, logistics, sales or research — can ask in their own words and pull from the same source of truth."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<!-- thumbnail for offline bundling -->
+<template id="__bundler_thumbnail">
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><rect width="100" height="100" fill="#0A0A0A"/><rect x="30" y="30" width="40" height="40" rx="8" fill="#F5D547"/><text x="50" y="62" font-family="monospace" font-size="30" font-weight="700" text-anchor="middle" fill="#0A0A0A">B</text></svg>
+</template>
+
+<!-- ===================== UTILITY BAR ===================== -->
+<div class="util">
+  <div class="live">
+    <span class="dot"></span>
+    <span data-en="Live with Corbana" data-es="En funcionamiento con Corbana">Live with Corbana</span>
+    <span class="loc" data-en="· Costa Rica" data-es="· Costa Rica">· Costa Rica</span>
+  </div>
+  <div class="lang" role="group" aria-label="Language">
+    <button data-lang-btn="en" class="active">EN</button>
+    <span class="sep">/</span>
+    <button data-lang-btn="es">ES</button>
+  </div>
+</div>
+
+<!-- ===================== NAV ===================== -->
+<header class="nav" id="nav">
+  <a class="nav-logo" href="#top" aria-label="Bananos Inteligentes home">
+    <img src="assets/sticker.png" alt="" />
+    <span class="wm">Bananos<br/>Inteligentes</span>
+  </a>
+  <nav class="nav-links">
+    <a href="#intelligence" data-en="What it does" data-es="Qué hace">What it does</a>
+    <a href="#chat" data-en="Banana Chat" data-es="Banana Chat">Banana Chat</a>
+    <a href="#built" data-en="Built for" data-es="Diseñado para">Built for</a>
+    <a href="#sticker" data-en="Send a sticker" data-es="Enviá un sticker">Send a sticker</a>
+  </nav>
+  <div class="nav-cta-wrap">
+    <a class="btn btn-primary" href="#contact" data-en="Bring intelligence" data-es="Lleve inteligencia">Bring intelligence</a>
+    <button class="nav-burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#intelligence" data-en="What it does" data-es="Qué hace">What it does</a>
+  <a href="#chat" data-en="Banana Chat" data-es="Banana Chat">Banana Chat</a>
+  <a href="#built" data-en="Built for" data-es="Diseñado para">Built for</a>
+  <a href="#sticker" data-en="Send a <em>sticker</em>" data-es="Enviá un <em>sticker</em>">Send a <em>sticker</em></a>
+  <a href="#faq" data-en="FAQ" data-es="Preguntas">FAQ</a>
+  <a href="#contact" data-en="Bring <em>intelligence</em>" data-es="Lleve <em>inteligencia</em>">Bring <em>intelligence</em></a>
+</div>
+
+<!-- ===================== HERO ===================== -->
+<section class="hero" id="top">
+  <div class="hero-grid-bg"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-scan"></div>
+  <div class="wrap">
+    <div class="hero-text">
+      <div class="hero-eyebrow eyebrow" data-en="Built by Man of the World" data-es="Desarrollado por Man of the World">Built by Man of the World</div>
+      <h1 data-en="<span class='ln'>Hear everything</span><span class='ln'>the <em>banana</em> is</span><span class='ln'>telling us.</span>" data-es="<span class='ln'>Escuchar todo</span><span class='ln'>lo que el <em>banano</em></span><span class='ln'>nos dice.</span>"><span class="ln">Hear everything</span><span class="ln">the <em>banana</em> is</span><span class="ln">telling us.</span></h1>
+      <p class="hero-sub" data-en="The AI orchestration platform for the banana industry. We unify yield, weather, rot, spray and soil into one intelligence layer — so reports that took a week now arrive in a day." data-es="La plataforma de orquestación de IA para la industria bananera. Unificamos rendimiento, clima, pudrición, fumigación y suelo en una sola capa de inteligencia — para que reportes que tomaban una semana ahora lleguen en un día.">The AI orchestration platform for the banana industry. We unify yield, weather, rot, spray and soil into one intelligence layer — so reports that took a week now arrive in a day.</p>
+      <div class="hero-meta">
+        <span data-en="The AI orchestration platform" data-es="Plataforma de orquestación de IA">The AI orchestration platform</span>
+        <span class="pipe"></span>
+        <span data-en="Live with Corbana" data-es="En funcionamiento con Corbana">Live with Corbana</span>
+        <span class="pipe"></span>
+        <span data-en="For the banana industry" data-es="Para la industria bananera">For the banana industry</span>
+      </div>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#chat" data-en="See Banana Chat" data-es="Ver Banana Chat">See Banana Chat</a>
+        <a class="btn btn-ghost" href="#sticker" data-en="Send a sticker" data-es="Enviá un sticker">Send a sticker</a>
+      </div>
+    </div>
+    <div class="hero-art">
+      <div class="orchestra">
+        <div class="orch-ring r3"></div>
+        <div class="orch-ring r2"></div>
+        <div class="orch-ring r1"></div>
+        <svg class="orch-links" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+          <path d="M22,14 L50,50"></path>
+          <path d="M80,35 L50,50"></path>
+          <path d="M16,72 L50,50"></path>
+          <path d="M78,90 L50,50"></path>
+        </svg>
+        <div class="orch-core"><div class="orch-halo"></div><img src="assets/sticker-foil-hd.png" alt="Bananos Inteligentes logo" /></div>
+        <div class="node n1" data-en="Yield + Weather" data-es="Rendimiento + Clima">Yield + Weather</div>
+        <div class="node n2" data-en="Rot + Spray" data-es="Pudrición + Fumig.">Rot + Spray</div>
+        <div class="node n3" data-en="Soil + Sensors" data-es="Suelo + Sensores">SOIL HEALTH</div>
+        <div class="node n4" data-en="One intelligence layer" data-es="Una capa de inteligencia">One intelligence layer</div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-ticker" aria-hidden="true">
+    <div class="ticker-track" data-en="<span><i></i>Leaf wetness <b>+18%</b></span><span>Block 12 risk <b>High</b></span><span>Next spray <b>3 days</b></span><span>Yield <b>+4.2%</b></span><span>Reporting <b>5d → 1d</b></span><span>Sigatoka pressure <b>Rising</b></span><span>Soil moisture <b>62%</b></span><span>Banana Chat <b>Online</b></span><span><i></i>Leaf wetness <b>+18%</b></span><span>Block 12 risk <b>High</b></span><span>Next spray <b>3 days</b></span><span>Yield <b>+4.2%</b></span><span>Reporting <b>5d → 1d</b></span><span>Sigatoka pressure <b>Rising</b></span><span>Soil moisture <b>62%</b></span><span>Banana Chat <b>Online</b></span>" data-es="<span><i></i>Humedad foliar <b>+18%</b></span><span>Lote 12 riesgo <b>Alto</b></span><span>Próx. fumigación <b>3 días</b></span><span>Rendimiento <b>+4.2%</b></span><span>Reportes <b>5d → 1d</b></span><span>Presión Sigatoka <b>En alza</b></span><span>Humedad suelo <b>62%</b></span><span>Banana Chat <b>En línea</b></span><span><i></i>Humedad foliar <b>+18%</b></span><span>Lote 12 riesgo <b>Alto</b></span><span>Próx. fumigación <b>3 días</b></span><span>Rendimiento <b>+4.2%</b></span><span>Reportes <b>5d → 1d</b></span><span>Presión Sigatoka <b>En alza</b></span><span>Humedad suelo <b>62%</b></span><span>Banana Chat <b>En línea</b></span>"><span><i></i>Leaf wetness <b>+18%</b></span><span>Block 12 risk <b>High</b></span><span>Next spray <b>3 days</b></span><span>Yield <b>+4.2%</b></span><span>Reporting <b>5d → 1d</b></span><span>Sigatoka pressure <b>Rising</b></span><span>Soil moisture <b>62%</b></span><span>Banana Chat <b>Online</b></span><span><i></i>Leaf wetness <b>+18%</b></span><span>Block 12 risk <b>High</b></span><span>Next spray <b>3 days</b></span><span>Yield <b>+4.2%</b></span><span>Reporting <b>5d → 1d</b></span><span>Sigatoka pressure <b>Rising</b></span><span>Soil moisture <b>62%</b></span><span>Banana Chat <b>Online</b></span></div>
+  </div>
+</section>
+
+<!-- ===================== STATS ===================== -->
+<section class="stats">
+  <div class="grid wrap" style="padding-left:0;padding-right:0;max-width:none;">
+    <div class="stat">
+      <div class="big">5×</div>
+      <div class="lbl" data-en="Faster reporting — a week into a day" data-es="Reportes más rápidos — de una semana a un día">Faster reporting — a week into a day</div>
+    </div>
+    <div class="stat">
+      <div class="big">1</div>
+      <div class="lbl" data-en="Layer over yield, weather, rot, spray, soil" data-es="Capa sobre rendimiento, clima, pudrición, fumigación, suelo">Layer over yield, weather, rot, spray, soil</div>
+    </div>
+    <div class="stat">
+      <div class="big">∞</div>
+      <div class="lbl" data-en="Questions Banana Chat answers in context" data-es="Preguntas que Banana Chat responde en contexto">Questions Banana Chat answers in context</div>
+    </div>
+    <div class="stat">
+      <div class="big">0</div>
+      <div class="lbl" data-en="Migration required — sits over existing systems" data-es="Migración requerida — se asienta sobre los sistemas existentes">Migration required — sits over existing systems</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== WHAT IT DOES ===================== -->
+<section class="band" id="intelligence">
+  <div class="wrap">
+    <div class="sect-head reveal">
+      <div class="eyebrow"><span class="num">01</span> <span data-en="What it does" data-es="Qué hace">What it does</span></div>
+      <h2 class="sect-title" data-en="One layer over <em>the banana's data.</em>" data-es="Una capa sobre <em>los datos del banano.</em>">One layer over <em>the banana's data.</em></h2>
+      <p class="lede" data-en="Bananos Inteligentes unifies yield, weather, rot, spray and soil data into a single intelligence layer — so any team member can ask a question in plain language and get an answer grounded in the operation's real data. Reports that took a week now arrive in a day." data-es="Bananos Inteligentes unifica los datos de rendimiento, clima, pudrición, fumigación y suelo en una sola capa de inteligencia — para que cualquier miembro del equipo pueda hacer una pregunta en lenguaje natural y recibir una respuesta basada en los datos reales de la operación. Reportes que tomaban una semana ahora llegan en un día.">Bananos Inteligentes unifies yield, weather, rot, spray and soil data into a single intelligence layer — so any team member can ask a question in plain language and get an answer grounded in the operation's real data. Reports that took a week now arrive in a day.</p>
+    </div>
+
+    <div class="pillars-grid reveal">
+      <div class="pillar">
+        <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M3 7h18M3 12h18M3 17h18" stroke-linecap="round"/><circle cx="7" cy="7" r="1.6" fill="currentColor" stroke="none"/><circle cx="15" cy="12" r="1.6" fill="currentColor" stroke="none"/><circle cx="10" cy="17" r="1.6" fill="currentColor" stroke="none"/></svg>
+        <div class="pnum">01 / <span data-en="Unify" data-es="Unificar">Unify</span></div>
+        <h3 data-en="Every system, one source of truth." data-es="Cada sistema, una sola fuente de verdad.">Every system, one source of truth.</h3>
+        <p data-en="Yield, weather, rot, spray and soil — unified, no migration required. Sits over what's already there." data-es="Rendimiento, clima, pudrición, fumigación y suelo — unificados, sin migración requerida. Se asienta sobre lo que ya existe.">Yield, weather, rot, spray and soil — unified, no migration required. Sits over what's already there.</p>
+      </div>
+      <div class="pillar">
+        <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M4 5h16v11H8l-4 3z" stroke-linejoin="round"/><path d="M8 10h8M8 13h5" stroke-linecap="round"/></svg>
+        <div class="pnum">02 / <span data-en="Query" data-es="Consultar">Query</span></div>
+        <h3 data-en="Banana Chat in plain language." data-es="Banana Chat en lenguaje natural.">Banana Chat in plain language.</h3>
+        <p data-en="Agronomy, logistics and sales ask in their own words and pull from the same source of truth — in Spanish or English." data-es="Agronomía, logística y ventas preguntan en sus propias palabras y consultan la misma fuente de verdad — en español o inglés.">Agronomy, logistics and sales ask in their own words and pull from the same source of truth — in Spanish or English.</p>
+      </div>
+      <div class="pillar">
+        <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M3 17l5-5 4 3 6-7" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 8h4v4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <div class="pnum">03 / <span data-en="Predict" data-es="Predecir">Predict</span></div>
+        <h3 data-en="Get ahead of the next outbreak." data-es="Adelántese al próximo brote.">Get ahead of the next outbreak.</h3>
+        <p data-en="Correlated weather, rot and spray history move Black Sigatoka from constant emergency to manageable variable." data-es="El historial correlacionado de clima, pudrición y fumigación convierte la Sigatoka Negra de emergencia constante en variable manejable.">Correlated weather, rot and spray history move Black Sigatoka from constant emergency to manageable variable.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== BANANA CHAT ===================== -->
+<section class="band band-tight chat-band" id="chat">
+  <div class="wrap">
+    <div class="chat-layout">
+      <div class="chat-copy reveal">
+        <div class="eyebrow"><span class="num">02</span> <span data-en="The product" data-es="El producto">The product</span></div>
+        <h2 data-en="Banana Chat, <em>in plain language.</em>" data-es="Banana Chat, <em>en lenguaje natural.</em>">Banana Chat, <em>in plain language.</em></h2>
+        <p class="lede" data-en="Agronomy, logistics, research and sales ask in their own words — and pull from the same source of truth. In Spanish or English." data-es="Agronomía, logística, investigación y ventas preguntan en sus propias palabras — y consultan la misma fuente de verdad. En español o inglés.">Agronomy, logistics, research and sales ask in their own words — and pull from the same source of truth. In Spanish or English.</p>
+        <div class="chat-points">
+          <div class="chat-point"><span class="k">01</span><p data-en="Grounded in <b>your operation's real data</b> — not the open internet." data-es="Basado en <b>los datos reales de tu operación</b> — no en el internet abierto.">Grounded in <b>your operation's real data</b> — not the open internet.</p></div>
+          <div class="chat-point"><span class="k">02</span><p data-en="Correlates <b>weather, rot, spray and yield</b> in one answer." data-es="Correlaciona <b>clima, pudrición, fumigación y rendimiento</b> en una sola respuesta.">Correlates <b>weather, rot, spray and yield</b> in one answer.</p></div>
+          <div class="chat-point"><span class="k">03</span><p data-en="Captures the <b>institutional expertise</b> that usually retires with people." data-es="Captura el <b>conocimiento institucional</b> que suele jubilarse con las personas.">Captures the <b>institutional expertise</b> that usually retires with people.</p></div>
+        </div>
+      </div>
+
+      <div class="chat-window reveal">
+        <div class="chat-top">
+          <span class="bmark"><img src="assets/sticker.png" alt="" /></span>
+          <span class="title">Banana Chat</span>
+          <span class="src"><span class="d"></span><span data-en="Live data" data-es="Datos en vivo">Live data</span></span>
+        </div>
+        <div class="chat-body" id="chatBody">
+          <div class="msg user"><div class="who">Agronomy · Field</div><div class="bubble">Which blocks are trending toward Black Sigatoka pressure this week?</div></div>
+          <div class="msg bot"><div class="who">Banana Chat</div><div class="bubble">Blocks <strong>7, 12 and 19</strong> are trending up — leaf wetness and the last spray window line up with early lesion patterns from 2023.<div class="bot-data"><span class="chip">RISK <b>HIGH</b> · BLK 7,12,19</span><span class="chip">LEAF WETNESS <b>+18%</b></span><span class="chip">NEXT SPRAY <b>3 DAYS</b></span></div></div></div>
+        </div>
+        <div class="chat-input">
+          <span class="field" data-en="Ask anything about your operation…" data-es="Preguntá lo que sea sobre tu operación…">Ask anything about your operation…</span>
+          <span class="send"><svg viewBox="0 0 24 24" fill="none" stroke="#0A0A0A" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== BUILT FOR ===================== -->
+<section class="band" id="built">
+  <div class="wrap">
+    <div class="sect-head reveal">
+      <div class="eyebrow"><span class="num">03</span> <span data-en="Built for" data-es="Diseñado para">Built for</span></div>
+      <h2 class="sect-title" data-en="Five audiences, <em>one platform.</em>" data-es="Cinco audiencias, <em>una plataforma.</em>">Five audiences, <em>one platform.</em></h2>
+    </div>
+    <div class="aud-grid reveal">
+      <div class="aud">
+        <span class="anum">01</span>
+        <h4 data-en="Growers &amp; Operators" data-es="Productores y Operadores">Growers &amp; Operators</h4>
+        <p data-en="Time saved on reporting · yield protection · spray efficiency." data-es="Tiempo ahorrado en reportes · protección del rendimiento · eficiencia en fumigación.">Time saved on reporting · yield protection · spray efficiency.</p>
+      </div>
+      <div class="aud">
+        <span class="anum">02</span>
+        <h4 data-en="Agronomists &amp; Researchers" data-es="Agrónomos e Investigadores">Agronomists &amp; Researchers</h4>
+        <p data-en="Predictive accuracy on disease pressure · queryable history at depth." data-es="Precisión predictiva sobre presión de enfermedades · historial consultable a profundidad.">Predictive accuracy on disease pressure · queryable history at depth.</p>
+      </div>
+      <div class="aud">
+        <span class="anum">03</span>
+        <h4 data-en="Industry Institutions" data-es="Instituciones de la Industria">Industry Institutions</h4>
+        <p data-en="Industry-wide standardization · capture of expert knowledge before it retires." data-es="Estandarización a nivel industria · captura del conocimiento experto antes de su retiro.">Industry-wide standardization · capture of expert knowledge before it retires.</p>
+      </div>
+      <div class="aud">
+        <span class="anum">04</span>
+        <h4 data-en="Buyers &amp; Logistics" data-es="Compradores y Logística">Buyers &amp; Logistics</h4>
+        <p data-en="Forecast accuracy on volume and arrival quality · earlier supply-side risk." data-es="Precisión en pronósticos de volumen y calidad de llegada · riesgo del lado de la oferta detectado antes.">Forecast accuracy on volume and arrival quality · earlier supply-side risk.</p>
+      </div>
+      <div class="aud">
+        <span class="anum">05</span>
+        <h4 data-en="Technology &amp; Investment" data-es="Tecnología e Inversión">Technology &amp; Investment</h4>
+        <p data-en="Defensibility through a proprietary data layer · time-to-value for the operator." data-es="Defensibilidad por una capa de datos propia · tiempo de generación de valor para el operador.">Defensibility through a proprietary data layer · time-to-value for the operator.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CORBANA QUOTE ===================== -->
+<section class="band quote-band">
+  <div class="wrap">
+    <div class="quote-layout">
+      <div class="quote-side reveal">
+        <div class="eyebrow"><span data-en="Anchor partner" data-es="Socio ancla">Anchor partner</span></div>
+        <div class="partner">Corbana</div>
+        <div class="yrs" data-en="30+ years of institutional banana expertise" data-es="+30 años de experiencia institucional en banano">30+ years of institutional banana expertise</div>
+      </div>
+      <div class="quote-main reveal">
+        <blockquote data-en="&ldquo;A report that used to take a week now arrives the next morning. The platform doesn't replace what we know — <span class='hl'>it captures it,</span> and gets it to the people who need it before the window closes.&rdquo;" data-es="&ldquo;Un reporte que antes tomaba una semana ahora llega a la mañana siguiente. La plataforma no reemplaza lo que sabemos — <span class='hl'>lo captura,</span> y lo lleva a las personas que lo necesitan antes de que se cierre la ventana.&rdquo;">&ldquo;A report that used to take a week now arrives the next morning. The platform doesn't replace what we know — <span class="hl">it captures it,</span> and gets it to the people who need it before the window closes.&rdquo;</blockquote>
+        <div class="quote-cite" data-en="Representative voice · Corbana partnership" data-es="Voz representativa · Alianza con Corbana">Representative voice · Corbana partnership</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SEND A STICKER ===================== -->
+<section class="band sticker-band" id="sticker">
+  <div class="wrap">
+    <div class="sticker-layout">
+      <div class="sticker-copy reveal">
+        <div class="eyebrow on-paper"><span data-en="Send a sticker" data-es="Enviá un sticker">Send a sticker</span></div>
+        <h2 data-en="Mark it with <em>intelligence.</em>" data-es="Márcalo con <em>inteligencia.</em>">Mark it with <em>intelligence.</em></h2>
+        <p class="lede" data-en="Our B-mark, stamped with an INTELLIGENCE seal. Send the sticker to a colleague over text or WhatsApp — and pass the platform along." data-es="Nuestra marca B, sellada con el distintivo INTELIGENCIA. Enviá el sticker a un colega por mensaje o WhatsApp — y pasá la plataforma.">Our B-mark, stamped with an INTELLIGENCE seal. Send the sticker to a colleague over text or WhatsApp — and pass the platform along.</p>
+        <div class="send-actions">
+          <button class="btn btn-ink" data-open-share data-en="Send a sticker" data-es="Enviá un sticker">Send a sticker</button>
+          <a class="btn btn-ghost" style="color:#0A0A0A;border-color:rgba(10,10,10,.25);" href="#contact" data-en="Bring intelligence" data-es="Lleve inteligencia">Bring intelligence</a>
+        </div>
+        <div class="sticker-note" data-en="Tap the sticker to send · works with your phone's share sheet" data-es="Tocá el sticker para enviar · funciona con el menú de compartir del móvil">Tap the sticker to send · works with your phone's share sheet</div>
+      </div>
+
+      <div class="sticker-stage reveal">
+        <figure class="big-sticker" id="stickerObj" role="button" tabindex="0" aria-label="Send the Bananos Inteligentes sticker">
+          <img class="bimg" src="assets/sticker-foil-hd.png" alt="Bananos Inteligentes sticker" />
+          <span class="sticker-hint" data-en="Tap to send →" data-es="Tocá para enviar →">Tap to send →</span>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FAQ ===================== -->
+<section class="band faq-band" id="faq">
+  <div class="wrap">
+    <div class="sect-head reveal">
+      <div class="eyebrow"><span class="num">04</span> <span data-en="FAQ" data-es="Preguntas frecuentes">FAQ</span></div>
+      <h2 class="sect-title" data-en="Questions, <em>answered.</em>" data-es="Preguntas, <em>respondidas.</em>">Questions, <em>answered.</em></h2>
+    </div>
+    <div class="faq-list reveal">
+      <details class="faq-item">
+        <summary><span data-en="Does it replace our existing systems?" data-es="¿Reemplaza nuestros sistemas existentes?">Does it replace our existing systems?</span><span class="faq-ico" aria-hidden="true"></span></summary>
+        <div class="faq-a"><p data-en="No. Bananos Inteligentes sits over the data you already collect — yield, weather, rot, spray and soil — and unifies it into a single intelligence layer. No migration required; it adds intelligence on top of what's already there." data-es="No. Bananos Inteligentes se asienta sobre los datos que ya recopilás — rendimiento, clima, pudrición, fumigación y suelo — y los unifica en una sola capa de inteligencia. Sin migración requerida; agrega inteligencia sobre lo que ya existe.">No. Bananos Inteligentes sits over the data you already collect — yield, weather, rot, spray and soil — and unifies it into a single intelligence layer. No migration required; it adds intelligence on top of what's already there.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary><span data-en="How long does setup take?" data-es="¿Cuánto tarda la implementación?">How long does setup take?</span><span class="faq-ico" aria-hidden="true"></span></summary>
+        <div class="faq-a"><p data-en="Pilot setup runs in weeks, not months. We start in the field with the questions your team is already asking, then connect the data sources behind them — so value arrives early." data-es="La implementación piloto se realiza en semanas, no meses. Empezamos en el campo con las preguntas que tu equipo ya se hace, y luego conectamos las fuentes de datos detrás de ellas — para que el valor llegue temprano.">Pilot setup runs in weeks, not months. We start in the field with the questions your team is already asking, then connect the data sources behind them — so value arrives early.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary><span data-en="How does it handle Black Sigatoka?" data-es="¿Cómo maneja la Sigatoka Negra?">How does it handle Black Sigatoka?</span><span class="faq-ico" aria-hidden="true"></span></summary>
+        <div class="faq-a"><p data-en="It correlates weather patterns with historical rot and spray efficacy to get ahead of disease pressure — telling teams not just when to spray, but what. Black Sigatoka moves from constant emergency to manageable variable." data-es="Correlaciona patrones climáticos con el historial de pudrición y la eficacia de fumigación para adelantarse a la presión de enfermedades — indicando no solo cuándo fumigar, sino qué. La Sigatoka Negra pasa de emergencia constante a variable manejable.">It correlates weather patterns with historical rot and spray efficacy to get ahead of disease pressure — telling teams not just when to spray, but what. Black Sigatoka moves from constant emergency to manageable variable.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary><span data-en="Who owns the data?" data-es="¿De quién son los datos?">Who owns the data?</span><span class="faq-ico" aria-hidden="true"></span></summary>
+        <div class="faq-a"><p data-en="You do. Operators own their operational data. The intelligence layer runs over the data you already collect — it does not extract or resell it." data-es="Tuyos. Los operadores son dueños de sus datos operativos. La capa de inteligencia funciona sobre los datos que ya recopilás — no los extrae ni los revende.">You do. Operators own their operational data. The intelligence layer runs over the data you already collect — it does not extract or resell it.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary><span data-en="What languages does Banana Chat support?" data-es="¿Qué idiomas admite Banana Chat?">What languages does Banana Chat support?</span><span class="faq-ico" aria-hidden="true"></span></summary>
+        <div class="faq-a"><p data-en="Spanish and English. Any team member — agronomy, logistics, sales or research — can ask in their own words and pull from the same source of truth." data-es="Español e inglés. Cualquier miembro del equipo — agronomía, logística, ventas o investigación — puede preguntar en sus propias palabras y consultar la misma fuente de verdad.">Spanish and English. Any team member — agronomy, logistics, sales or research — can ask in their own words and pull from the same source of truth.</p></div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CTA ===================== -->
+<section class="cta-band" id="contact">
+  <div class="grid-bg"></div>
+  <div class="wrap">
+    <div class="cta-inner">
+      <div class="eyebrow reveal"><span class="num">05</span> <span data-en="Bring intelligence to your operation" data-es="Lleve inteligencia a su operación">Bring intelligence to your operation</span></div>
+      <h2 class="reveal" data-en="Bring <em>intelligence</em> to your operation." data-es="Lleve <em>inteligencia</em> a su operación.">Bring <em>intelligence</em> to your operation.</h2>
+      <p class="lede reveal" style="text-align:center;" data-en="Pilot setup runs in weeks, not months. Tell us where it hurts — we'll bring intelligence to it." data-es="La implementación piloto se realiza en semanas, no meses. Contános dónde duele — le llevamos inteligencia.">Pilot setup runs in weeks, not months. Tell us where it hurts — we'll bring intelligence to it.</p>
+      <form class="lead-form reveal" id="leadForm" novalidate>
+        <div class="lf-row">
+          <div class="lf-field">
+            <label data-en="Name" data-es="Nombre">Name</label>
+            <input type="text" name="name" required data-ph-en="Your name" data-ph-es="Tu nombre" />
+          </div>
+          <div class="lf-field">
+            <label data-en="Email" data-es="Correo">Email</label>
+            <input type="email" name="email" required data-ph-en="you@farm.com" data-ph-es="vos@finca.com" />
+          </div>
+        </div>
+        <div class="lf-row">
+          <div class="lf-field">
+            <label data-en="Farm / Organization" data-es="Finca / Organización">Farm / Organization</label>
+            <input type="text" name="farm" data-ph-en="Farm or company" data-ph-es="Finca o empresa" />
+          </div>
+          <div class="lf-field">
+            <label data-en="Location" data-es="Ubicación">Location</label>
+            <input type="text" name="location" data-ph-en="Region, country" data-ph-es="Región, país" />
+          </div>
+        </div>
+        <div class="lf-field">
+          <label data-en="What's slowing you down?" data-es="¿Qué te está frenando?">What's slowing you down?</label>
+          <div class="lf-chips">
+            <label class="lf-chip"><input type="checkbox" name="pain" value="data" /><span data-en="Fragmented data" data-es="Datos fragmentados">Fragmented data</span></label>
+            <label class="lf-chip"><input type="checkbox" name="pain" value="answers" /><span data-en="Time to answers" data-es="Tiempo a respuestas">Time to answers</span></label>
+            <label class="lf-chip"><input type="checkbox" name="pain" value="reporting" /><span data-en="Reporting" data-es="Reportes">Reporting</span></label>
+            <label class="lf-chip"><input type="checkbox" name="pain" value="disease" /><span data-en="Disease pressure" data-es="Presión de enfermedades">Disease pressure</span></label>
+          </div>
+        </div>
+        <div class="lf-submit">
+          <button type="submit" class="btn btn-primary" data-en="Request a pilot" data-es="Solicitar un piloto">Request a pilot</button>
+          <span class="lf-note" data-en="We'll reply within two business days." data-es="Respondemos en dos días hábiles.">We'll reply within two business days.</span>
+        </div>
+      </form>
+      <div class="lf-success reveal" id="leadSuccess" hidden>
+        <div class="lf-success-mark">✓</div>
+        <h3 data-en="Thanks — we'll be in touch." data-es="Gracias — te contactaremos.">Thanks — we'll be in touch.</h3>
+        <p data-en="Your details are on their way to the team." data-es="Tus datos van en camino al equipo.">Your details are on their way to the team.</p>
+      </div>
+      <div class="cta-contact reveal">www.bananosinteligentes.com · <a href="mailto:hello@bananosinteligentes.com">hello@bananosinteligentes.com</a></div>
+    </div>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="wrap foot-inner">
+    <a class="foot-logo" href="#top">
+      <img src="assets/sticker.png" alt="" />
+      <span class="wm">Bananos Inteligentes<br/><span data-en="Built by Man of the World" data-es="Desarrollado por Man of the World">Built by Man of the World</span></span>
+    </a>
+    <div class="foot-meta">© 2026 · Costa Rica · <a href="mailto:hello@bananosinteligentes.com">hello@bananosinteligentes.com</a></div>
+  </div>
+</footer>
+
+<!-- ===================== SHARE SHEET ===================== -->
+<div class="share-overlay" id="shareOverlay" aria-hidden="true">
+  <div class="share-sheet" role="dialog" aria-label="Send a sticker">
+    <button class="share-close" type="button" aria-label="Close">×</button>
+    <div class="share-card">
+      <img class="mini-sticker" src="assets/sticker-foil-hd.png" alt="" />
+    </div>
+    <h3 data-en="Send a sticker" data-es="Enviá un sticker">Send a sticker</h3>
+    <p data-en="Pass Bananos Inteligentes along — the sticker goes with your message." data-es="Pasá Bananos Inteligentes — el sticker acompaña tu mensaje.">Pass Bananos Inteligentes along — the sticker goes with your message.</p>
+    <div class="share-actions">
+      <button class="share-act primary" id="shareNative" type="button">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 12v7a1 1 0 001 1h14a1 1 0 001-1v-7" stroke-linecap="round"/><path d="M12 16V3M7 8l5-5 5 5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span class="lbl" data-en="Text the sticker" data-es="Enviar por mensaje">Text the sticker</span>
+      </button>
+      <a class="share-act wa" id="shareWa" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1012 2zm0 18a8 8 0 01-4.1-1.1l-.3-.2-2.8.7.8-2.8-.2-.3A8 8 0 1112 20zm4.4-6c-.2-.1-1.4-.7-1.6-.8s-.4-.1-.5.1-.6.8-.8 1-.3.2-.5.1a6.5 6.5 0 01-1.9-1.2 7.2 7.2 0 01-1.3-1.7c-.1-.2 0-.4.1-.5l.4-.4.2-.4v-.4l-.8-1.8c-.2-.5-.4-.4-.5-.4h-.5a1 1 0 00-.7.3 3 3 0 00-.9 2.2 5.2 5.2 0 001.1 2.7 11.8 11.8 0 004.5 4 5.3 5.3 0 002.5.5 2.7 2.7 0 001.8-1.3 2.2 2.2 0 00.2-1.3c-.1-.1-.3-.2-.5-.3z"/></svg>
+        <span class="lbl">WhatsApp</span>
+      </a>
+      <button class="share-act" id="shareDownload" type="button">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3v12M7 11l5 5 5-5M5 21h14" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span class="lbl" data-en="Download sticker" data-es="Descargar sticker">Download sticker</span>
+      </button>
+      <button class="share-act" id="shareCopy" type="button">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 012-2h10"/></svg>
+        <span class="lbl" data-en="Copy link" data-es="Copiar enlace">Copy link</span>
+      </button>
+    </div>
+  </div>
+</div>
+
+<script src="js/site.js"></script>
+</body>
+</html>
