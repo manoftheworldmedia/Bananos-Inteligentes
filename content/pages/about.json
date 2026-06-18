@@ -1,0 +1,11 @@
+{
+  "slug": "about",
+  "en": {
+    "title": "About Bananos Inteligentes",
+    "body": "<p>Bananos Inteligentes is the AI orchestration platform built for the banana industry, created by Man of the World. It sits over the data growers already collect — yield, weather, rot, spray and soil — and unifies it into a single intelligence layer.</p><p>With Banana Chat, any team member can ask a question in plain language, in Spanish or English, and get an answer grounded in the operation's real data. Live with Corbana in San Pablo, Costa Rica.</p>"
+  },
+  "es": {
+    "title": "Acerca de Bananos Inteligentes",
+    "body": "<p>Bananos Inteligentes es la plataforma de orquestación de IA construida para la industria bananera, creada por Man of the World. Se asienta sobre los datos que los productores ya recopilan — rendimiento, clima, pudrición, fumigación y suelo — y los unifica en una sola capa de inteligencia.</p><p>Con Banana Chat, cualquier miembro del equipo puede hacer una pregunta en lenguaje natural, en español o inglés, y recibir una respuesta basada en los datos reales de la operación. En vivo con Corbana en San Pablo, Costa Rica.</p>"
+  }
+}

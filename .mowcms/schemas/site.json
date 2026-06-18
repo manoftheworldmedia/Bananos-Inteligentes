@@ -1,0 +1,607 @@
+{
+  "project": "BANANOS-INTELIGENTES",
+  "label": "Bananos Inteligentes",
+  "description": "AI orchestration platform for the banana industry. Single-page bilingual (EN/ES) marketing site built by Man of the World. Manage homepage copy, navigation, and settings in the portal.",
+  "languages": [
+    "en",
+    "es"
+  ],
+  "schemas": [
+    {
+      "name": "home",
+      "label": "Homepage",
+      "icon": "home",
+      "kind": "single",
+      "path": "content/home.json",
+      "fields": [
+        {
+          "name": "images",
+          "label": "Images",
+          "type": "object",
+          "fields": [
+            {
+              "name": "logo",
+              "label": "Logo",
+              "type": "image"
+            },
+            {
+              "name": "hero",
+              "label": "Hero image",
+              "type": "image"
+            },
+            {
+              "name": "og_image",
+              "label": "Social share image",
+              "type": "image"
+            }
+          ]
+        },
+        {
+          "name": "en",
+          "label": "English",
+          "type": "object",
+          "ui": {
+            "group": "Languages"
+          },
+          "fields": [
+            {
+              "name": "seo_title",
+              "label": "SEO title (browser tab + Google)",
+              "type": "string",
+              "required": true,
+              "maxLength": 70
+            },
+            {
+              "name": "seo_description",
+              "label": "SEO description (Google snippet)",
+              "type": "text",
+              "required": true,
+              "maxLength": 320
+            },
+            {
+              "name": "og_title",
+              "label": "Social share title",
+              "type": "string"
+            },
+            {
+              "name": "og_description",
+              "label": "Social share description",
+              "type": "text"
+            },
+            {
+              "name": "hero_eyebrow",
+              "label": "Hero — small label",
+              "type": "string"
+            },
+            {
+              "name": "hero_title",
+              "label": "Hero — headline (HTML allowed)",
+              "type": "text",
+              "required": true
+            },
+            {
+              "name": "hero_subhead",
+              "label": "Hero — paragraph",
+              "type": "text"
+            },
+            {
+              "name": "hero_cta_primary",
+              "label": "Hero — primary button",
+              "type": "string"
+            },
+            {
+              "name": "hero_cta_secondary",
+              "label": "Hero — secondary button",
+              "type": "string"
+            },
+            {
+              "name": "intelligence_eyebrow",
+              "label": "What it does — small label",
+              "type": "string"
+            },
+            {
+              "name": "intelligence_title",
+              "label": "What it does — heading (HTML allowed)",
+              "type": "text"
+            },
+            {
+              "name": "intelligence_lede",
+              "label": "What it does — paragraph",
+              "type": "text"
+            },
+            {
+              "name": "chat_eyebrow",
+              "label": "Banana Chat — small label",
+              "type": "string"
+            },
+            {
+              "name": "chat_title",
+              "label": "Banana Chat — heading (HTML allowed)",
+              "type": "text"
+            },
+            {
+              "name": "chat_lede",
+              "label": "Banana Chat — paragraph",
+              "type": "text"
+            },
+            {
+              "name": "built_eyebrow",
+              "label": "Built for — small label",
+              "type": "string"
+            },
+            {
+              "name": "built_title",
+              "label": "Built for — heading (HTML allowed)",
+              "type": "text"
+            },
+            {
+              "name": "sticker_eyebrow",
+              "label": "Send a sticker — small label",
+              "type": "string"
+            },
+            {
+              "name": "sticker_title",
+              "label": "Send a sticker — heading (HTML allowed)",
+              "type": "text"
+            },
+            {
+              "name": "sticker_lede",
+              "label": "Send a sticker — paragraph",
+              "type": "text"
+            },
+            {
+              "name": "faq_eyebrow",
+              "label": "FAQ — small label",
+              "type": "string"
+            },
+            {
+              "name": "faq_title",
+              "label": "FAQ — heading (HTML allowed)",
+              "type": "text"
+            },
+            {
+              "name": "contact_eyebrow",
+              "label": "Contact — small label",
+              "type": "string"
+            },
+            {
+              "name": "contact_title",
+              "label": "Contact — heading (HTML allowed)",
+              "type": "text"
+            },
+            {
+              "name": "contact_lede",
+              "label": "Contact — paragraph",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "name": "es",
+          "label": "Español",
+          "type": "object",
+          "ui": {
+            "group": "Languages"
+          },
+          "fields": [
+            {
+              "name": "seo_title",
+              "label": "SEO title (browser tab + Google)",
+              "type": "string",
+              "required": true,
+              "maxLength": 70
+            },
+            {
+              "name": "seo_description",
+              "label": "SEO description (Google snippet)",
+              "type": "text",
+              "required": true,
+              "maxLength": 320
+            },
+            {
+              "name": "og_title",
+              "label": "Social share title",
+              "type": "string"
+            },
+            {
+              "name": "og_description",
+              "label": "Social share description",
+              "type": "text"
+            },
+            {
+              "name": "hero_eyebrow",
+              "label": "Hero — small label",
+              "type": "string"
+            },
+            {
+              "name": "hero_title",
+              "label": "Hero — headline (HTML allowed)",
+              "type": "text",
+              "required": true
+            },
+            {
+              "name": "hero_subhead",
+              "label": "Hero — paragraph",
+              "type": "text"
+            },
+            {
+              "name": "hero_cta_primary",
+              "label": "Hero — primary button",
+              "type": "string"
+            },
+            {
+              "name": "hero_cta_secondary",
+              "label": "Hero — secondary button",
+              "type": "string"
+            },
+            {
+              "name": "intelligence_eyebrow",
+              "label": "What it does — small label",
+              "type": "string"
+            },
+            {
+              "name": "intelligence_title",
+              "label": "What it does — heading (HTML allowed)",
+              "type": "text"
+            },
+            {
+              "name": "intelligence_lede",
+              "label": "What it does — paragraph",
+              "type": "text"
+            },
+            {
+              "name": "chat_eyebrow",
+              "label": "Banana Chat — small label",
+              "type": "string"
+            },
+            {
+              "name": "chat_title",
+              "label": "Banana Chat — heading (HTML allowed)",
+              "type": "text"
+            },
+            {
+              "name": "chat_lede",
+              "label": "Banana Chat — paragraph",
+              "type": "text"
+            },
+            {
+              "name": "built_eyebrow",
+              "label": "Built for — small label",
+              "type": "string"
+            },
+            {
+              "name": "built_title",
+              "label": "Built for — heading (HTML allowed)",
+              "type": "text"
+            },
+            {
+              "name": "sticker_eyebrow",
+              "label": "Send a sticker — small label",
+              "type": "string"
+            },
+            {
+              "name": "sticker_title",
+              "label": "Send a sticker — heading (HTML allowed)",
+              "type": "text"
+            },
+            {
+              "name": "sticker_lede",
+              "label": "Send a sticker — paragraph",
+              "type": "text"
+            },
+            {
+              "name": "faq_eyebrow",
+              "label": "FAQ — small label",
+              "type": "string"
+            },
+            {
+              "name": "faq_title",
+              "label": "FAQ — heading (HTML allowed)",
+              "type": "text"
+            },
+            {
+              "name": "contact_eyebrow",
+              "label": "Contact — small label",
+              "type": "string"
+            },
+            {
+              "name": "contact_title",
+              "label": "Contact — heading (HTML allowed)",
+              "type": "text"
+            },
+            {
+              "name": "contact_lede",
+              "label": "Contact — paragraph",
+              "type": "text"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "news",
+      "label": "Blog / News",
+      "icon": "file",
+      "kind": "collection",
+      "folder": "content/news",
+      "extension": "json",
+      "primaryField": "date",
+      "fields": [
+        {
+          "name": "date",
+          "label": "Publish date",
+          "type": "date",
+          "required": true
+        },
+        {
+          "name": "cover",
+          "label": "Cover image",
+          "type": "image"
+        },
+        {
+          "name": "featured",
+          "label": "Featured",
+          "type": "boolean",
+          "default": false
+        },
+        {
+          "name": "en",
+          "label": "English",
+          "type": "object",
+          "ui": {
+            "group": "Languages"
+          },
+          "fields": [
+            {
+              "name": "title",
+              "label": "Title",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "excerpt",
+              "label": "Excerpt",
+              "type": "text"
+            },
+            {
+              "name": "body",
+              "label": "Body",
+              "type": "richtext",
+              "required": true
+            }
+          ]
+        },
+        {
+          "name": "es",
+          "label": "Español",
+          "type": "object",
+          "ui": {
+            "group": "Languages"
+          },
+          "fields": [
+            {
+              "name": "title",
+              "label": "Title",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "excerpt",
+              "label": "Excerpt",
+              "type": "text"
+            },
+            {
+              "name": "body",
+              "label": "Body",
+              "type": "richtext",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "pages",
+      "label": "Pages",
+      "icon": "file",
+      "kind": "collection",
+      "folder": "content/pages",
+      "extension": "json",
+      "primaryField": "slug",
+      "fields": [
+        {
+          "name": "slug",
+          "label": "URL slug",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "en",
+          "label": "English",
+          "type": "object",
+          "ui": {
+            "group": "Languages"
+          },
+          "fields": [
+            {
+              "name": "title",
+              "label": "Title",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "body",
+              "label": "Body",
+              "type": "richtext",
+              "required": true
+            }
+          ]
+        },
+        {
+          "name": "es",
+          "label": "Español",
+          "type": "object",
+          "ui": {
+            "group": "Languages"
+          },
+          "fields": [
+            {
+              "name": "title",
+              "label": "Title",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "body",
+              "label": "Body",
+              "type": "richtext",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "navigation",
+      "label": "Navigation Menu",
+      "icon": "menu",
+      "kind": "single",
+      "path": "content/navigation.json",
+      "fields": [
+        {
+          "name": "items",
+          "label": "Menu items (drag to reorder)",
+          "type": "list",
+          "min": 1,
+          "of": {
+            "type": "object",
+            "fields": [
+              {
+                "name": "url",
+                "label": "Link",
+                "type": "url",
+                "required": true
+              },
+              {
+                "name": "newTab",
+                "label": "Open in new tab",
+                "type": "boolean",
+                "default": false
+              },
+              {
+                "name": "label_en",
+                "label": "Label (English)",
+                "type": "string",
+                "required": true
+              },
+              {
+                "name": "label_es",
+                "label": "Label (Español)",
+                "type": "string",
+                "required": false
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "settings",
+      "label": "Site Settings",
+      "icon": "menu",
+      "kind": "single",
+      "path": "content/settings.json",
+      "fields": [
+        {
+          "name": "email",
+          "label": "Contact email",
+          "type": "email"
+        },
+        {
+          "name": "phone",
+          "label": "Phone",
+          "type": "string"
+        },
+        {
+          "name": "social",
+          "label": "Social links",
+          "type": "list",
+          "of": {
+            "type": "object",
+            "fields": [
+              {
+                "name": "platform",
+                "label": "Platform",
+                "type": "select",
+                "options": [
+                  "instagram",
+                  "linkedin",
+                  "x",
+                  "youtube",
+                  "tiktok",
+                  "facebook"
+                ],
+                "required": true
+              },
+              {
+                "name": "url",
+                "label": "URL",
+                "type": "url",
+                "required": true
+              }
+            ]
+          }
+        },
+        {
+          "name": "shop_enabled",
+          "label": "Enable shop",
+          "type": "boolean",
+          "default": false
+        },
+        {
+          "name": "shop_currency",
+          "label": "Default currency",
+          "type": "select",
+          "options": [
+            "usd",
+            "eur",
+            "gbp",
+            "cad",
+            "aud"
+          ],
+          "default": "usd"
+        },
+        {
+          "name": "en",
+          "label": "English",
+          "type": "object",
+          "ui": {
+            "group": "Languages"
+          },
+          "fields": [
+            {
+              "name": "footer_tagline",
+              "label": "Footer tagline",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "name": "es",
+          "label": "Español",
+          "type": "object",
+          "ui": {
+            "group": "Languages"
+          },
+          "fields": [
+            {
+              "name": "footer_tagline",
+              "label": "Footer tagline",
+              "type": "text"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
