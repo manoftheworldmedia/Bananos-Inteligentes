@@ -1,0 +1,34 @@
+{
+  "items": [
+    {
+      "url": "/#intelligence",
+      "newTab": false,
+      "label_en": "What it does",
+      "label_es": "Qué hace"
+    },
+    {
+      "url": "/#chat",
+      "newTab": false,
+      "label_en": "Banana Chat",
+      "label_es": "Banana Chat"
+    },
+    {
+      "url": "/#built",
+      "newTab": false,
+      "label_en": "Built for",
+      "label_es": "Diseñado para"
+    },
+    {
+      "url": "/#sticker",
+      "newTab": false,
+      "label_en": "Send a sticker",
+      "label_es": "Enviá un sticker"
+    },
+    {
+      "url": "/#contact",
+      "newTab": false,
+      "label_en": "Bring intelligence",
+      "label_es": "Lleve inteligencia"
+    }
+  ]
+}

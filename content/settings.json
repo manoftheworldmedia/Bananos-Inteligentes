@@ -1,0 +1,13 @@
+{
+  "email": "hello@bananosinteligentes.com",
+  "phone": "",
+  "social": [],
+  "shop_enabled": false,
+  "shop_currency": "usd",
+  "en": {
+    "footer_tagline": "Built by Man of the World"
+  },
+  "es": {
+    "footer_tagline": "Desarrollado por Man of the World"
+  }
+}
