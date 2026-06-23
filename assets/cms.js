@@ -148,6 +148,22 @@
     }
   }
 
+  /* ---------- FAQ: render from home.json faqs[] (portal-editable) ---------- */
+  function esc(v){ return String(v==null?'':v).replace(/&/g,'&amp;').replace(/"/g,'&quot;'); }
+  function renderFaqs(home){
+    var faqs = home && home.faqs;
+    if (!Array.isArray(faqs) || !faqs.length) return;
+    var list = document.querySelector('.faq-band .faq-list');
+    if (!list) return;
+    list.innerHTML = faqs.map(function (f) {
+      var qen = esc(f.question_en), qes = esc(f.question_es != null && f.question_es !== '' ? f.question_es : f.question_en);
+      var aen = esc(f.answer_en),   aes = esc(f.answer_es != null && f.answer_es !== '' ? f.answer_es : f.answer_en);
+      return '<details class="faq-item"><summary><span data-en="' + qen + '" data-es="' + qes + '">' +
+        esc(f.question_en) + '</span><span class="faq-ico" aria-hidden="true"></span></summary>' +
+        '<div class="faq-a"><p data-en="' + aen + '" data-es="' + aes + '">' + esc(f.answer_en) + '</p></div></details>';
+    }).join('');
+  }
+
   /* ---------- boot ---------- */
 
   function boot() {
@@ -155,6 +171,7 @@
     fetchJSON('content/home.json')
       .then(function (home) {
         applyHome(home);
+        renderFaqs(home);
         return Promise.all([
           fetchJSON('content/navigation.json').then(applyNav).catch(function () {}),
           fetchJSON('content/settings.json').then(applySettings).catch(function () {}),

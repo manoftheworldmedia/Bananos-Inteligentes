@@ -41,7 +41,7 @@
     LANG = lang;
     document.documentElement.setAttribute('lang', lang);
     document.body.classList.toggle('lang-es', lang==='es');
-    i18nEls.forEach(function(el){
+    document.querySelectorAll('[data-en]').forEach(function(el){
       var val = el.getAttribute('data-'+lang);
       if(val != null) el.innerHTML = val;
     });

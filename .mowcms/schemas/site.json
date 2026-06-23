@@ -315,6 +315,38 @@
               "type": "text"
             }
           ]
+        },
+        {
+          "name": "faqs",
+          "label": "FAQ items",
+          "type": "list",
+          "of": {
+            "type": "object",
+            "fields": [
+              {
+                "name": "question_en",
+                "label": "Question (English)",
+                "type": "string",
+                "required": true
+              },
+              {
+                "name": "answer_en",
+                "label": "Answer (English)",
+                "type": "text",
+                "required": true
+              },
+              {
+                "name": "question_es",
+                "label": "Question (Español)",
+                "type": "string"
+              },
+              {
+                "name": "answer_es",
+                "label": "Answer (Español)",
+                "type": "text"
+              }
+            ]
+          }
         }
       ]
     },
