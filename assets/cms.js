@@ -61,6 +61,8 @@
     setMeta('name', 'description', block.seo_description);
     setMeta('property', 'og:title', block.og_title || block.seo_title);
     setMeta('property', 'og:description', block.og_description || block.seo_description);
+    setMeta('name', 'twitter:title', block.og_title || block.seo_title);
+    setMeta('name', 'twitter:description', block.og_description || block.seo_description);
     if (data.images && data.images.og_image) {
       setMeta('property', 'og:image', data.images.og_image);
     }
@@ -162,6 +164,21 @@
         esc(f.question_en) + '</span><span class="faq-ico" aria-hidden="true"></span></summary>' +
         '<div class="faq-a"><p data-en="' + aen + '" data-es="' + aes + '">' + esc(f.answer_en) + '</p></div></details>';
     }).join('');
+    // Rebuild the FAQPage structured data from the portal FAQs (English).
+    try {
+      var lds = document.querySelectorAll('script[type="application/ld+json"]');
+      for (var k = 0; k < lds.length; k++) {
+        if (lds[k].textContent.indexOf('"FAQPage"') > -1) {
+          lds[k].textContent = JSON.stringify({
+            '@context': 'https://schema.org', '@type': 'FAQPage',
+            mainEntity: faqs.map(function (f) {
+              return { '@type': 'Question', name: f.question_en, acceptedAnswer: { '@type': 'Answer', text: f.answer_en } };
+            })
+          });
+          break;
+        }
+      }
+    } catch (e) { /* SEO sync best-effort */ }
   }
 
   /* ---------- boot ---------- */
