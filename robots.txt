@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://bananosinteligentes.com/sitemap.xml
