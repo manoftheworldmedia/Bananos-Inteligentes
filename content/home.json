@@ -57,5 +57,37 @@
     "contact_eyebrow": "Lleve inteligencia a su operación",
     "contact_title": "Lleve <em>inteligencia</em> a su operación.",
     "contact_lede": "La implementación piloto se realiza en semanas, no meses. Contános dónde duele — le llevamos inteligencia."
-  }
+  },
+  "faqs": [
+    {
+      "question_en": "Does it replace our existing systems?",
+      "question_es": "¿Reemplaza nuestros sistemas existentes?",
+      "answer_en": "No. Bananos Inteligentes sits over the data you already collect — yield, weather, rot, spray and soil — and unifies it into a single intelligence layer. No migration required; it adds intelligence on top of what's already there.",
+      "answer_es": "No. Bananos Inteligentes se asienta sobre los datos que ya recopilás — rendimiento, clima, pudrición, fumigación y suelo — y los unifica en una sola capa de inteligencia. Sin migración requerida; agrega inteligencia sobre lo que ya existe."
+    },
+    {
+      "question_en": "How long does setup take?",
+      "question_es": "¿Cuánto tarda la implementación?",
+      "answer_en": "Pilot setup runs in weeks, not months. We start in the field with the questions your team is already asking, then connect the data sources behind them — so value arrives early.",
+      "answer_es": "La implementación piloto se realiza en semanas, no meses. Empezamos en el campo con las preguntas que tu equipo ya se hace, y luego conectamos las fuentes de datos detrás de ellas — para que el valor llegue temprano."
+    },
+    {
+      "question_en": "How does it handle Black Sigatoka?",
+      "question_es": "¿Cómo maneja la Sigatoka Negra?",
+      "answer_en": "It correlates weather patterns with historical rot and spray efficacy to get ahead of disease pressure — telling teams not just when to spray, but what. Black Sigatoka moves from constant emergency to manageable variable.",
+      "answer_es": "Correlaciona patrones climáticos con el historial de pudrición y la eficacia de fumigación para adelantarse a la presión de enfermedades — indicando no solo cuándo fumigar, sino qué. La Sigatoka Negra pasa de emergencia constante a variable manejable."
+    },
+    {
+      "question_en": "Who owns the data?",
+      "question_es": "¿De quién son los datos?",
+      "answer_en": "You do. Operators own their operational data. The intelligence layer runs over the data you already collect — it does not extract or resell it.",
+      "answer_es": "Tuyos. Los operadores son dueños de sus datos operativos. La capa de inteligencia funciona sobre los datos que ya recopilás — no los extrae ni los revende."
+    },
+    {
+      "question_en": "What languages does Banana Chat support?",
+      "question_es": "¿Qué idiomas admite Banana Chat?",
+      "answer_en": "Spanish and English. Any team member — agronomy, logistics, sales or research — can ask in their own words and pull from the same source of truth.",
+      "answer_es": "Español e inglés. Cualquier miembro del equipo — agronomía, logística, ventas o investigación — puede preguntar en sus propias palabras y consultar la misma fuente de verdad."
+    }
+  ]
 }
